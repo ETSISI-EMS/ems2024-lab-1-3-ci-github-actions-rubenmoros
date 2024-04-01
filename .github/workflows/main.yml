@@ -1,4 +1,4 @@
-name: Build and test Java proyect 
+name: Build and test of Java proyect 
 on: [push]
 jobs:
   build: 
@@ -9,5 +9,5 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version 1.8
-        -name: Build with Maven
-        run: mvn -8 package --file pom.xml
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
